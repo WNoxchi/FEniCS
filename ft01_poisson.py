@@ -3,8 +3,9 @@
 # HPFEM01.1x - High Performace Finite Element Modeling - FEniCS tutorials
 # https://fenicsproject.org/pub/tutorial/sphinx1/._ftut1003.html
 
-# from fenics import *
 from dolfin import *
+from fenics import *
+# from dolfin import *
 import numpy as np
 
 parameters['plotting_backend'] == 'matplotlib'
@@ -35,8 +36,10 @@ u = Function(V)
 solve(a == L, u, bc)
 
 # Plot solution and mesh
-plot(u, title='Finite Element Solution')
-plot(mesh, title='Finite Element Mesh')
+# plot(u, title='Finite Element Solution')
+# plot(mesh, title='Finite Element Mesh')
+plot(u)
+plot(mesh)
 
 
 # Save soltuion to file in VTK format
